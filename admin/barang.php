@@ -1,5 +1,6 @@
 <?php session_start();
-include_once("../config.php");
+include_once "../config.php";
+
 $result = mysqli_query($koneksi, "SELECT * FROM barang ORDER BY id_barang ASC");
 
 if( !isset($_SESSION['admin']) )
