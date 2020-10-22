@@ -18,8 +18,8 @@ include_once("../config.php");
 // Check if form is submitted for user update, then brownirect to homepage after update
 if(isset($_POST['update']))
 { 
-  $id = $_POST['id'];
-  $pass2 = $_POST['pass'];
+  (isset($id = $_POST['id']));
+  (isset($pass2 = $_POST['pass']));
     
   // update user data
   $result = mysqli_query($koneksi, "UPDATE users SET password='$pass2' WHERE id=$id");

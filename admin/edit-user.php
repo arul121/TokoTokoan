@@ -18,10 +18,10 @@ include_once("../config.php");
 // Check if form is submitted for user update, then brownirect to homepage after update
 if(isset($_POST['update']))
 { 
-  $id = $_POST['id'];
-  $name=$_POST['nama'];
-  $level=$_POST['level'];
-  $id_cabang=$_POST['id_cabang'];
+  (isset($id = $_POST['id']));
+  (isset($name=$_POST['nama']));
+  (isset($level=$_POST['level']));
+  (isset($id_cabang=$_POST['id_cabang']));
     
   // update user data
   $result = mysqli_query($koneksi, "UPDATE users SET nama='$name',level='$level',id_cabang='$id_cabang' WHERE id=$id");
