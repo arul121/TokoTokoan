@@ -156,10 +156,10 @@ while($user_data = mysqli_fetch_array($result))
 					      	</tr>
 					     	<tr> 
 					        	<td>Cabang</td>
-					        	<td><input type="text" name="id_cabang" value=<?php echo $id_cabang;?>></td>
+					        	<td><input type="text" name="id_cabang" value=<?php echo sanitize_key($id_cabang);?>></td>
 					      	</tr>
 					      	<tr>
-				            	<td><input type="hidden" name="id" value=<?php echo $_GET['id'];?>></td>
+				            	<td><input type="hidden" name="id" value=<?php echo sanitize_key($_GET['id']);?>></td>
 				            </tr>
 					      	</table>
 					      	<table>

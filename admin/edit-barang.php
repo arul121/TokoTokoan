@@ -174,7 +174,7 @@ while($user_data = mysqli_fetch_array($result))
                 <td><input type="date" name="waktu" value=<?php echo $waktu;?>></td>
               </tr>
               <tr>
-                  <td><input type="hidden" name="id" value=<?php echo $_GET['id_barang'];?>></td>
+                  <td><input type="hidden" name="id" value=<?php echo sanitize_key($_GET['id_barang']);?>></td>
               </tr>
               </table>
               <table>

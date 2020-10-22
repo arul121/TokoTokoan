@@ -77,7 +77,7 @@ $nama = ( isset($_SESSION['user']) ) ? $_SESSION['user'] : '';
 		                    	<div class="background" style="margin-bottom:-15%;">
 		                    		<img src="../images/bg1.jpg">
 		                    	</div>
-		                		<span class="white-text name"><?php echo $nama; ?><i class="material-icons left">account_circle</i></span>
+		                		<span class="white-text name"><?php echo sanitize_key($nama); ?><i class="material-icons left">account_circle</i></span>
 		                	</div>
 		                </li>
 		                
@@ -130,7 +130,7 @@ $nama = ( isset($_SESSION['user']) ) ? $_SESSION['user'] : '';
 		                    <div class="card-content brown-text text-darken-2">
 			                    <span class="card-title">Barang
 			                        <i class="medium material-icons left">archive</i>
-			                        <p class="right"><?php echo $jml2; ?></p>
+			                        <p class="right"><?php echo sanitize_key($jml2); ?></p>
 			                    </span>
 		                    </div>
 		                    
