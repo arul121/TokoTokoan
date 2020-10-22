@@ -3,7 +3,7 @@
 include_once("../config.php");
  
 // Get id from URL to delete that user
-$id = $_GET['id'];
+$id = (isset($_GET['id']));
  
 // Delete user row from table based on given id
 $result = mysqli_query($koneksi, "DELETE FROM users WHERE id=$id");

@@ -27,11 +27,11 @@ $namauser = ( isset($_SESSION['user']) ) ? $_SESSION['user'] : '';
 // Check if form is submitted for user update, then brownirect to homepage after update
 if(isset($_POST['update']))
 { 
-  $id_barang = $_POST['id_barang'];
-  $nama = $_POST['nama_barang'];
-  $jenis=$_POST['jenis_barang'];
-  $jumlah=$_POST['jumlah_barang'];
-  $waktu=$_POST['waktu'];
+  $id_barang = (isset($_POST['id_barang']));
+  $nama = (isset($_POST['nama_barang']));
+  $jenis=(isset($_POST['jenis_barang']));
+  $jumlah=(isset($_POST['jumlah_barang']));
+  $waktu=(isset($_POST['waktu']));
     
   // update user data
   $result = mysqli_query($koneksi, "UPDATE barang SET id_barang='$id_barang',nama_barang='$nama',jenis_barang='$jenis',jumlah_barang='$jumlah',waktu='$waktu' WHERE id_barang=$id_barang");
