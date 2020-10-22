@@ -128,7 +128,7 @@ $nama = ( isset($_SESSION['user']) ) ? $_SESSION['user'] : '';
 			                    echo "<td hidden>".$user_data['id']."</td>";
 				                echo "<td> <h6>".sanitize_key($user_data['nama'])."</h6> </td>";
 			                    echo "<td><h6>".sanitize_key($user_data['level'])."</h6></td>"; 
-			                    echo "<td><h6>".$user_data['id_cabang']."</h6></td>"; 
+			                    echo "<td><h6>".sanitize_key($user_data['id_cabang'])."</h6></td>"; 
 				                echo "<td> <a href='edit-user.php?id=$user_data[id]' style='text-decoration: none;'><i class='material-icons' title='Edit $test'>mode_edit</i></a> | <a data-id='1' class='hapus' href='delete.php?id=$user_data[id]' style='text-decoration: none;'><i class='material-icons' title='Hapus $test'>delete</i></a> | <a href='edit-password.php?id=$user_data[id]' style='text-decoration: none;'><i class='material-icons' title='Ganti Kata Sandi $test'>lock</i></a> </td></tr>";
 				            }
 

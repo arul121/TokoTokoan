@@ -138,7 +138,7 @@ if( !isset($_SESSION['user']) )
                         echo "<td>".$user_data['id_barang']."</td>";
                         echo "<td>".$user_data['nama_barang']."</td>";
                         echo "<td>".$user_data['jenis_barang']."</td>";
-                          echo "<td>".$user_data['jumlah_barang']."</td>"; 
+                          echo "<td>".sanitize_key($user_data['jumlah_barang'])."</td>"; 
                           echo "<td>".$user_data['waktu']."</td>";    
                         echo "</tr>";  
                     }

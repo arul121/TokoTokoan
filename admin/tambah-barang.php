@@ -170,7 +170,7 @@ $nama = ( isset($_SESSION['user']) ) ? $_SESSION['user'] : '';
             // Insert user data into table
             $result = mysqli_query($koneksi, "INSERT INTO barang(id_barang,nama_barang,jenis_barang,jumlah_barang,waktu) VALUES('$id_barang','$nama_barang','$jenis_barang','$jumlah_barang','$waktu')"); 
             
-            echo "<script>alert('Tambah Barang Keluar Berhasil ! ID Barang : $id_barang') </script>";
+            echo "<script>alert('Tambah Barang Keluar Berhasil ! ID Barang : ".sanitize_key($id_barang)."') </script>";
           }
         ?>
 

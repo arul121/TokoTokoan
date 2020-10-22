@@ -71,7 +71,7 @@ $nama = ( isset($_SESSION['user']) ) ? $_SESSION['user'] : '';
 		                    	<div class="background" style="margin-bottom:-15%;">
 		                    		<img src="../images/bg1.jpg">
 		                    	</div>
-		                		<span class="white-text name"><?php echo $nama; ?><i class="material-icons left">account_circle</i></span>
+		                		<span class="white-text name"><?php echo sanitize_key($nama); ?><i class="material-icons left">account_circle</i></span>
 		                	</div>
 		                </li>
 		                
@@ -120,8 +120,8 @@ $nama = ( isset($_SESSION['user']) ) ? $_SESSION['user'] : '';
 				                echo "<tr>";
 			                    echo "<td hidden>".$user_data['id']."</td>";
 				                echo "<td> <h6>".$user_data['nama']."</h6> </td>";
-			                    echo "<td><h6>".$user_data['level']."</h6></td>"; 
-			                    echo "<td><h6>".$user_data['id_cabang']."</h6></td>"; 
+			                    echo "<td><h6>".sanitize_key($user_data['level'])."</h6></td>"; 
+			                    echo "<td><h6>".sanitize_key($user_data['id_cabang'])."</h6></td>"; 
 				                echo "<td><a data-id='1' class='hapus'href='delete.php?id=$user_data[id]' style='text-decoration: none;'><i class='material-icons title='Hapus $test'>delete</i></a> | <a href='edit-password.php?id=$user_data[id]' style='text-decoration: none;'><i class='material-icons' title='Ganti Kata Sandi $test'>lock</i></a> </td></tr>";
 				            }
 							?>

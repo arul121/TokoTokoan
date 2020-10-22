@@ -76,7 +76,7 @@ if( !isset($_SESSION['user']) )
 		                    	<div class="background" style="margin-bottom:-15%;">
 		                    		<img src="../images/bg1.jpg">
 		                    	</div>
-		                		<span class="white-text name"><?php echo $nama; ?><i class="material-icons left">account_circle</i></span>
+		                		<span class="white-text name"><?php echo sanitize_key($nama); ?><i class="material-icons left">account_circle</i></span>
 		                	</div>
 		                </li>
 		                
@@ -144,15 +144,15 @@ if( !isset($_SESSION['user']) )
 				            		";
 
                         			echo "<tr>";
-                        			echo "<td>".$user_data['id_barang']."</td>";
-                        			echo "<td>".$user_data['nama_barang']."</td>";
+                        			echo "<td>".sanitize_key($user_data['id_barang'])."</td>";
+                        			echo "<td>".sanitize_key($user_data['nama_barang'])."</td>";
                         			echo "<td>".$user_data['jenis_barang']."</td>";
                        	 			echo "<td>".$user_data['jumlah_barang']."</td>"; 
                         			echo "<td>".$user_data['waktu']."</td>";   
 			                        echo "</table>";
 			                      }else{
 			                      	echo "<table>";
-			                        echo "<tr><td colspan='4'><center><h6><b>'$cari'</b> Tidak Ditemukan. Silahkan Periksa Kembali Keyword Anda</h6></center></td></tr>";
+			                        echo "<tr><td colspan='4'><center><h6><b>'".sanitize_key($cari)."'</b> Tidak Ditemukan. Silahkan Periksa Kembali Keyword Anda</h6></center></td></tr>";
 			                      }
 			                    }
 			                ?>

@@ -47,7 +47,7 @@
 				<tr>
 					<td><?php echo $no++; ?></td>
 					<td><?php echo $d['nama_barang']; ?></td>
-					<td><?php echo $d['jenis_barang']; ?></td>
+					<td><?php echo sanitize_key($d['jenis_barang']); ?></td>
 					<td><?php echo $d['jumlah_barang']; ?></td>
 					<td><?php echo $d['waktu']; ?></td>
 				</tr>
@@ -69,7 +69,7 @@
 					data: [
 					<?php 
 					$jumlah_kopi_luwak = mysqli_query($koneksi,"SELECT jumlah_barang from barang  where nama_barang='Kopi luwak' ");
-					echo mysqli_num_rows($jumlah_kopi_luwak);
+					echo mysqli_num_rows(sanitize_key($jumlah_kopi_luwak));
 					?>, 
 					<?php 
 					$jumlah_toraja = mysqli_query($koneksi,"SELECT jumlah_barang from barang where nama_barang='toraja'");
@@ -77,7 +77,7 @@
 					?>, 
 					<?php 
 					$jumlah_aceh = mysqli_query($koneksi,"SELECT jumlah_barang from barang where nama_barang='aceh'");
-					echo mysqli_num_rows($jumlah_aceh);
+					echo mysqli_num_rows(sanitize_key($jumlah_aceh));
 					?>, 
 					<?php 
 					$jumlah_sunda = mysqli_query($koneksi,"SELECT jumlah_barang from barang where nama_barang='sunda'");

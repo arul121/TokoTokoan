@@ -108,7 +108,7 @@ while($user_data = mysqli_fetch_array($result))
                           <div class="background" style="margin-bottom:-15%;">
                             <img src="../images/bg1.jpg">
                           </div>
-                        <span class="white-text name"><?php echo $namauser; ?><i class="material-icons left">account_circle</i></span>
+                        <span class="white-text name"><?php echo sanitize_key($namauser); ?><i class="material-icons left">account_circle</i></span>
                       </div>
                     </li>
                     
@@ -156,11 +156,11 @@ while($user_data = mysqli_fetch_array($result))
                 <td><input disabled type="text" name="jenis_barang" value=<?php echo $jenis;?>></td>
               </tr>
               <td>Jumlah Barang</td>
-                <td><input type="text" name="jumlah_barang" value=<?php echo $jumlah;?>></td>
+                <td><input type="text" name="jumlah_barang" value=<?php echo sanitize_key($jumlah);?>></td>
               </tr>
               <tr> 
                 <td>Tanggal update</td>
-                <td><input type="date" name="waktu" value=<?php echo $waktu;?>></td>
+                <td><input type="date" name="waktu" value=<?php echo sanitize_key($waktu);?>></td>
               </tr>
               <tr>
                   <td><input type="hidden" name="id" value=<?php echo $_GET['id_barang'];?>></td>
