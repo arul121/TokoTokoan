@@ -142,7 +142,7 @@ $nama = ( isset($_SESSION['user']) ) ? $_SESSION['user'] : '';
                         		echo "<td>".$user_data['jenis_barang']."</td>";
                         		echo "<td>".$user_data['jumlah_barang']."</td>"; 
                           		echo "<td>".$user_data['waktu']."</td>";     
-				                echo "<td> <a href='edit-barang.php?id_barang=$user_data[id_barang]' style='text-decoration: none;'><i class='material-icons' title='Edit $test'>mode_edit</i></a> | <a data-id='1' class='hapus' href='delete-barang.php?id_barang=$user_data[id_barang]' style='text-decoration: none;'><i class='material-icons' title='Hapus $test'>delete</i></a> </td></tr>";  
+				                echo "<td> <a href='edit-barang.php?id_barang=".sanitize_key($user_data[id_barang])."' style='text-decoration: none;'><i class='material-icons' title='Edit ".sanitize_key($test)."'>mode_edit</i></a> | <a data-id='1' class='hapus' href='delete-barang.php?id_barang=".sanitize_key($user_data[id_barang])."' style='text-decoration: none;'><i class='material-icons' title='Hapus ".sanitize_key($test)."'>delete</i></a> </td></tr>";  
 				            }
 
 							?>
