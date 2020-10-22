@@ -6,7 +6,7 @@ $result = mysqli_query($koneksi, "SELECT * FROM barang WHERE id_barang=$id_baran
 if( !isset($_SESSION['admin']) )
 {
   header('location:./../'.$_SESSION['akses']);
-  exit();
+  die();
 }
 
 while($user_data = mysqli_fetch_array($result))
