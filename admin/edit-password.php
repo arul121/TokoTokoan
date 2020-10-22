@@ -150,7 +150,7 @@ while($user_data = mysqli_fetch_array($result))
               </tr>
               <tr> 
                 <td>Password Lama</td>
-                <td><input type="password" value=<?php echo $str; ?> id="pass" disabled></td>
+                <td><input type="password" value=<?php echo sanitize_key($str); ?> id="pass" disabled></td>
                 <td> <i class="material-icons" id="show" title="Lihat Password" onclick="ShowPassword()">visibility</i> <i class="material-icons"  style="display:none" id="hide" title="Sembunyikan Password" onclick="HidePassword()">visibility_off</i></td>
               </tr>
               <tr>

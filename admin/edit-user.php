@@ -148,7 +148,7 @@ while($user_data = mysqli_fetch_array($result))
 							<!--kolom isian table-->
 					      	<tr> 
 					        	<td>Nama</td>
-					        	<td><input type="text" name="nama" value=<?php echo $name;?>></td>
+					        	<td><input type="text" name="nama" value=<?php echo sanitize_key($name);?>></td>
 					      	</tr>
 					      	<tr> 
 					        	<td>Level</td>

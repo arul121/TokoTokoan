@@ -138,7 +138,7 @@ $nama = ( isset($_SESSION['user']) ) ? $_SESSION['user'] : '';
 			                    $test = $user_data['id_barang'];      
                         		echo "<tr>";
                         		echo "<td>".$user_data['id_barang']."</td>";
-                        		echo "<td>".$user_data['nama_barang']."</td>";
+                        		echo "<td>".sanitize_key($user_data['nama_barang'])."</td>";
                         		echo "<td>".$user_data['jenis_barang']."</td>";
                         		echo "<td>".$user_data['jumlah_barang']."</td>"; 
                           		echo "<td>".$user_data['waktu']."</td>";     
