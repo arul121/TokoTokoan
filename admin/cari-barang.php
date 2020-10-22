@@ -77,7 +77,7 @@ $nama = ( isset($_SESSION['user']) ) ? $_SESSION['user'] : '';
 		                    	<div class="background" style="margin-bottom:-15%;">
 		                    		<img src="../images/bg1.jpg">
 		                    	</div>
-		                		<span class="white-text name"><?php echo $nama; ?><i class="material-icons left">account_circle</i></span>
+		                		<span class="white-text name"><?php print $nama; ?><i class="material-icons left">account_circle</i></span>
 		                	</div>
 		                </li>
 		                
