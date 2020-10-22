@@ -1,5 +1,5 @@
 <?php session_start();
-include_once("../config.php");
+include "../config.php";
 $id_barang = $_GET['id_barang'];
 $result = mysqli_query($koneksi, "SELECT * FROM barang WHERE id_barang=$id_barang");
 

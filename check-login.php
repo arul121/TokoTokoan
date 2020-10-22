@@ -7,7 +7,7 @@ if( !isset($_POST['username']) ) { header('location:index.php'); exit(); }
 # set nilai default dari error,
 $error = '';
 
-require ( 'config.php' );
+require 'config.php';
 
 $username = trim( $_POST['username'] );
 $password = trim( $_POST['password'] );

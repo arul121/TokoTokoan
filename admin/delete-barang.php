@@ -1,6 +1,6 @@
 <?php
 // include database connection file
-include_once("../config.php");
+include "../config.php";
  
 // Get id from URL to delete that user
 $id_barang = $_GET['id_barang'];

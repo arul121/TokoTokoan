@@ -1,5 +1,5 @@
 <?php session_start();
-include_once("../config.php");
+include "../config.php";
 $result = mysqli_query($koneksi, "SELECT * FROM users ORDER BY nik DESC");
 
 if( !isset($_SESSION['admin']) )

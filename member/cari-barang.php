@@ -1,5 +1,5 @@
 <?php session_start();
-include_once("../config.php");
+include "../config.php";
 $conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 $result = mysqli_query($koneksi, "SELECT * FROM barang ORDER BY id_barang DESC");
 

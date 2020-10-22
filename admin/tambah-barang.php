@@ -1,6 +1,6 @@
 <?php session_start();
 error_reporting(0);
-include_once("../config.php");
+include "../config.php";
 $result = mysqli_query($koneksi, "SELECT * FROM barang ORDER BY id_barang ASC");
 
 
