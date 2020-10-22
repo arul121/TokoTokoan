@@ -127,7 +127,7 @@ $nama = ( isset($_SESSION['user']) ) ? $_SESSION['user'] : '';
 
 				                if(isset($_POST['cari2'])){
 			                    $no = 1; //buat urutan nomer
-			                    $cari = (isset($_POST['cari']));
+			                    $cari = $_POST['cari'];
 			                    $sql = "SELECT * FROM barang WHERE id_barang  LIKE '%$cari%' OR nama_barang LIKE '%$cari%' OR jenis_barang LIKE '%$cari%' OR jumlah_barang LIKE '%$cari%' OR waktu LIKE '%$cari%'";
 			                    $query = mysqli_query($conn,$sql);
 			                    
